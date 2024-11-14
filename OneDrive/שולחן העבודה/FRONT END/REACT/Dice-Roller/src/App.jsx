@@ -18,12 +18,12 @@ function App() {
 
 function handleDiceThrow () {
   const [num1, num2] = throwDice();
-  console.log('num1', num1);
-  console.log('num2', num2);
+  // console.log('num1', num1);
+  // console.log('num2', num2);
   player.currttentScore += (num1 + num2);
-  console.log('player.currttentScore' ,player.currttentScore);
+  // console.log('player.currttentScore' ,player.currttentScore);
   if  (player.currttentScore >= targetScore) {
-  console.log(`currttent Score: ${player.currttentScore} is bigger then ${targetScore}. game over`);
+  // console.log(`currttent Score: ${player.currttentScore} is bigger then ${targetScore}. game over`);
   }
 }
 
