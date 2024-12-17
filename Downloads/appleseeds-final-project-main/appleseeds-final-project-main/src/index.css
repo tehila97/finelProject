@@ -3,9 +3,6 @@
 @tailwind utilities; */
 
 
-
-
-
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f7fc;
@@ -30,21 +27,17 @@ h1 {
   border-radius: 10px;
 }
 
-.square {
-  background-color: #f9f9f9;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
-
 .top {
   display: grid;
-  grid-template-columns: 150px 1fr; 
+  grid-template-columns: 1fr 1fr; 
   gap: 20px;
 }
 
 .profile-img-container {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .profile-img-container img {
@@ -53,12 +46,32 @@ h1 {
   border-radius: 50%;
   border: 2px solid #ddd;
 }
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+}
 
 .profile-info p {
   font-size: 16px;
   margin: 8px 0;
   color: #555;
 }
+
+.square.top {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 20px;
+}
+
+.square {
+  background-color: #f9f9f9;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 20px;
+} 
+
 
 .middle {
   display: grid;
@@ -106,3 +119,6 @@ button:focus {
     font-size: 14px;
   }
 }
+
+
+
