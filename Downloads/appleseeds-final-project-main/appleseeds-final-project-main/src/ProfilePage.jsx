@@ -62,7 +62,7 @@ export default function ProfilePage() {
         />
         )}
       </div>
-      
+
         <p>Name: {user.name}</p>
         <p>Rating: {user.rating}</p>
         <p>About Me: {user.aboutMe}</p>
@@ -99,15 +99,29 @@ export default function ProfilePage() {
         <p>Basic Statistics: {user.basicStatistics}</p>
     </div>
 
-    <div className='square bottom'> 
-    <h3>feedback: {user.feedback}</h3>
-    <ul>
-      <li>daniel:amazing professional </li>
-      <li>shara:amazing professional </li>
-    </ul>
-    </div>
+        <div className='square bottom'> 
+          <h3> Feedback:</h3>
+          <ul>
+            <li className='feedback-item'>
+            <div className='feedback-header'> 
+              <img src="https://via.placeholder.com/50" alt="Daniel" className='feedback-avatar'/>
+              <h5>Daniel</h5>
+            </div>
+            <p className="feedback-comment"> amezing proffeshinal!</p>
+            </li>
 
-      
+            <li className='feedback-item'>
+            <div className='feedback-header'> 
+              <img src="https://via.placeholder.com/50" alt="Shara" className='feedback-avatar'/>
+              <h5>Shara</h5>
+            </div>
+            <p className="feedback-comment"> GOOD!</p>
+            </li>
+
+          </ul>
+        </div>
+
+
       <div className='profile-info'>
         {user.isEditing && (
           <>
