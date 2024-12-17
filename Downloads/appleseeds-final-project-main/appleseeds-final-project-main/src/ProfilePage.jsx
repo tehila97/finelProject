@@ -54,19 +54,20 @@ export default function ProfilePage() {
     <div className='square top'> 
       <div className='profile-img-container'>
         <img src={user.profileImg} alt="Profile" style={{ width: "150px", height: "150px"}} />
+        <p>Name: {user.name}</p>
+        <p>Rating: {user.rating}</p>
+        <p>About Me: {user.aboutMe}</p>
       </div>
 
+      <div className='square'> </div>
       <div className='profile-info'>
-        <p>Name: {user.name}</p>
-        <p>About Me: {user.aboutMe}</p>
-        <p>Rating: {user.rating}</p>
+        <p>Phone Number: {user.phoneNumber}</p>
       </div>
     </div>
 
     <div className='square middle'>
         <h3>academicProfession: {user.academicProfession}</h3>
         <p>Culture: {user.culture}</p>
-        <p>Phone Number: {user.phoneNumber}</p>
         <p>Academic Institution: {user.academicInstitution}</p>
         <p>Type of Service: {user.typeOfService}</p>
         <p>Experience: {user.experience}</p>
