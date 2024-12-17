@@ -1,3 +1,4 @@
+import './index.css';
 import { useState } from "react";
 
 export default function ProfilePage() {
@@ -46,21 +47,20 @@ export default function ProfilePage() {
   };
 
   return (
-    <div>
+    <div className='container'>
       <h1>User Profile</h1>
-      <div>
+      <div className='profile-img-container'>
         <img src={user.profileImg} alt="Profile" style={{ width: "150px", height: "150px"}} />
       </div>
 
       <div> 
         {user.isEditing && (
-        <input type="file" accept="image/*" onChange={handleImgChange}
+        <input className='input-file' type="file" accept="image/*" onChange={handleImgChange}
         />
         )}
       </div>
-
+      <div className='profile-info'>
         <p>Name: {user.name}</p>
-      <div>
         <p>email:</p>
         {user.isEditing ? (
         <input
@@ -76,7 +76,7 @@ export default function ProfilePage() {
         <p>password:</p>
         {user.isEditing ? (
           <input
-            type="number"
+            type="password"
             name="password"
             value={user.password}
             onChange={handleChange}
@@ -102,4 +102,5 @@ export default function ProfilePage() {
     </div>
   );
 }
+
 
