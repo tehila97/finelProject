@@ -69,7 +69,6 @@ export default function ProfilePage() {
       </div>
 
       <div className='square'> 
-      <div className='profile-info'>
         <p>Phone Number: <a href={`https://wa.me/${user.phoneNumber.replace(/-/g, '')}`} target="_blank" rel="noopener noreferrer">
           {user.phoneNumber}
           </a></p>
@@ -86,7 +85,18 @@ export default function ProfilePage() {
         ) : (
         <span>{user.email}</span>
         )}
-      </div>
+
+    {user.isEditing && (
+          <>
+          <p>password:</p>
+          <input
+            type="password"
+            name="password"
+            value={user.password}
+            onChange={handleChange}
+            />
+            </>
+        )}
       </div>
     </div>
 
@@ -120,28 +130,13 @@ export default function ProfilePage() {
 
           </ul>
         </div>
-
-
-      <div className='profile-info'>
-        {user.isEditing && (
-          <>
-          <p>password:</p>
-          <input
-            type="password"
-            name="password"
-            value={user.password}
-            onChange={handleChange}
-            />
-            </>
-        )}
-
-
+      
         <button onClick={toggleEdit}>
           {user.isEditing ? "Save Changes" : "Edit Profile"}
         </button>
       </div>
-    </div>
   );
 }
+
 
 
