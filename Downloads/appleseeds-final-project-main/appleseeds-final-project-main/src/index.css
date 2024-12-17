@@ -1,0 +1,56 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+
+.profile-container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .profile-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+  }
+  
+  .profile-picture img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .user-info {
+    text-align: left;
+  }
+  
+  .edit-actions {
+    margin-top: 20px;
+  }
+  
+  input[type="email"],
+  input[type="password"] {
+    padding: 5px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
