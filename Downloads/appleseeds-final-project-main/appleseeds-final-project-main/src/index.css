@@ -9,8 +9,6 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f7fc;
-  margin: 0;
-  padding: 0;
 }
 
 h1 {
@@ -21,9 +19,9 @@ h1 {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr; /* עמודה אחת בברירת מחדל */
-  grid-template-rows: auto; /* שורות שמתאימות לגובה התוכן */
-  gap: 20px; /* רווח בין התאים */
+  grid-template-columns: 1fr; 
+  grid-template-rows: auto; 
+  gap: 20px; 
   max-width: 1000px;
   margin: 30px auto;
   padding: 20px;
@@ -41,7 +39,7 @@ h1 {
 
 .top {
   display: grid;
-  grid-template-columns: 150px 1fr; /* תמונה ו-2 תאים: אחד לתמונה, השני לטקסט */
+  grid-template-columns: 150px 1fr; 
   gap: 20px;
 }
 
@@ -52,7 +50,7 @@ h1 {
 .profile-img-container img {
   width: 150px;
   height: 150px;
-  border-radius: 10px;
+  border-radius: 50%;
   border: 2px solid #ddd;
 }
 
@@ -64,7 +62,7 @@ h1 {
 
 .middle {
   display: grid;
-  grid-template-columns: 1fr; /* כל התוכן יהיה בעמודה אחת */
+  grid-template-columns: 1fr; 
   gap: 10px;
 }
 
