@@ -79,11 +79,6 @@ h1 {
   gap: 10px;
 }
 
-.bottom {
-  background-color: #e8f5e9;
-  display: grid;
-  grid-template-columns: 1fr;
-}
 
 button {
   background-color: #5C6BC0;
@@ -108,12 +103,12 @@ button:focus {
     padding: 15px;
     margin: 10px;
   }
-
+  
   .profile-img-container img {
     width: 120px;
     height: 120px;
   }
-
+  
   .profile-info p,
   .middle p {
     font-size: 14px;
@@ -121,7 +116,32 @@ button:focus {
 }
 
 
+.bottom {
+  background-color: #e8f5e9;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+
+.feedback-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-header {
+  display: flex;
+  align-items: center;
+}
+
+.feedback-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.feedback-comment {
+  font-size: 14px;
+  color: #555;
+}
  
-
-
-
