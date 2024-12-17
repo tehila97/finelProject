@@ -1,5 +1,6 @@
 import './index.css';
 import { useState } from "react";
+// import {Data} from './Data.jsx'
 
 export default function ProfilePage() {
   const [user, setUser] = useState({
@@ -17,7 +18,7 @@ export default function ProfilePage() {
     rating: "4.7/5",
     basicStatistics: "10+ projects completed",
     profileImg: "https://via.placeholder.com/150",
-    feedback:"daniel: Ohed is an amazing professional with great passion for architecture! shara: Ohed is an amazing professional with great passion for architecture!",
+    feedback: "daniel: amazing, shara: good",
     isEditing: false
   });
 
@@ -54,14 +55,38 @@ export default function ProfilePage() {
     <div className='square top'> 
       <div className='profile-img-container'>
         <img src={user.profileImg} alt="Profile" style={{ width: "150px", height: "150px"}} />
+        
+      <div> 
+        {user.isEditing && (
+        <input className='input-file' type="file" accept="image/*" onChange={handleImgChange}
+        />
+        )}
+      </div>
+      
         <p>Name: {user.name}</p>
         <p>Rating: {user.rating}</p>
         <p>About Me: {user.aboutMe}</p>
       </div>
 
-      <div className='square'> </div>
+      <div className='square'> 
       <div className='profile-info'>
-        <p>Phone Number: {user.phoneNumber}</p>
+        <p>Phone Number: <a href={`https://wa.me/${user.phoneNumber.replace(/-/g, '')}`} target="_blank" rel="noopener noreferrer">
+          {user.phoneNumber}
+          </a></p>
+        
+
+        <p>email:</p>
+        {user.isEditing ? (
+        <input
+        type="text"
+        name="email"
+        value={user.email}
+        onChange={handleChange}
+        />
+        ) : (
+        <span>{user.email}</span>
+        )}
+      </div>
       </div>
     </div>
 
@@ -75,38 +100,25 @@ export default function ProfilePage() {
     </div>
 
     <div className='square bottom'> 
-    <p>feedback: {user.feedback}</p>
+    <h3>feedback: {user.feedback}</h3>
+    <ul>
+      <li>daniel:amazing professional </li>
+      <li>shara:amazing professional </li>
+    </ul>
     </div>
 
-      <div> 
-        {user.isEditing && (
-        <input className='input-file' type="file" accept="image/*" onChange={handleImgChange}
-        />
-        )}
-      </div>
+      
       <div className='profile-info'>
-        <p>email:</p>
-        {user.isEditing ? (
-        <input
-        type="text"
-        name="email"
-        value={user.email}
-        onChange={handleChange}
-        />
-        ) : (
-        <span>{user.email}</span>
-        )}
-                
-        <p>password:</p>
-        {user.isEditing ? (
+        {user.isEditing && (
+          <>
+          <p>password:</p>
           <input
             type="password"
             name="password"
             value={user.password}
             onChange={handleChange}
-          />
-        ) : (
-          <span>{user.password}</span>
+            />
+            </>
         )}
 
 
@@ -117,3 +129,5 @@ export default function ProfilePage() {
     </div>
   );
 }
+
+
