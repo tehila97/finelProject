@@ -62,7 +62,7 @@ export default function ProfilePage() {
         />
         )}
       </div>
-
+      
         <p>Name: {user.name}</p>
         <p>Rating: {user.rating}</p>
         <p>About Me: {user.aboutMe}</p>
@@ -109,27 +109,30 @@ export default function ProfilePage() {
         <p>Basic Statistics: {user.basicStatistics}</p>
     </div>
 
-        <div className='square bottom'> 
-          <h3> Feedback:</h3>
-          <ul>
-            <li className='feedback-item'>
-            <div className='feedback-header'> 
-              <img src="https://via.placeholder.com/50" alt="Daniel" className='feedback-avatar'/>
-              <h5>Daniel</h5>
-            </div>
-            <p className="feedback-comment"> amezing proffeshinal!</p>
-            </li>
 
-            <li className='feedback-item'>
-            <div className='feedback-header'> 
-              <img src="https://via.placeholder.com/50" alt="Shara" className='feedback-avatar'/>
-              <h5>Shara</h5>
-            </div>
-            <p className="feedback-comment"> GOOD!</p>
-            </li>
+    <div className="square bottom">
+  <h3>Feedback:</h3>
+  <div className="feedback-item">
+    <div className="feedback-header">
+      <img src="https://via.placeholder.com/50" alt="Daniel" className="feedback-avatar" />
+      <h5>
+      <a href="/profile/daniel" className="feedback-name">Daniel</a>
+      </h5>
+    </div>
+    <p className="feedback-comment">Amazing professional!</p>
+  </div>
 
-          </ul>
-        </div>
+  <div className="feedback-item">
+    <div className="feedback-header">
+      <img src="https://via.placeholder.com/50" alt="Sarah" className="feedback-avatar" />
+      <h5>
+      <a href="/profile/daniel" className="feedback-name">Sarah</a>
+      </h5>
+    </div>
+    <p className="feedback-comment">Good!</p>
+  </div>
+</div>
+
       
         <button onClick={toggleEdit}>
           {user.isEditing ? "Save Changes" : "Edit Profile"}
