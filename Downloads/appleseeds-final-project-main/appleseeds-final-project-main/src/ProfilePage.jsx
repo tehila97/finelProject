@@ -1,3 +1,87 @@
+
+
+
+// export default function ProfilePage () {
+//   return (
+//     <>
+//       <h1> My Services</h1>
+//       <div className="square1">
+//           <ul>
+//             <li> Exam preparation  </li>
+//             <li> Private lessons </li>
+//             <li> Professional intention </li>
+//             <li> Exam preparation  </li>
+//             <li> Private lessons </li>
+//             <li> Professional intention </li>
+//             <li> Exam preparation  </li>
+//             <li> Private lessons </li>
+//           </ul>
+//       </div>
+
+
+
+//       <h1> My Skills</h1>
+//       <div className="square middle">
+//           <ul>
+//             <li> java script </li>
+//             <li> python </li>
+//             <li> React </li>
+//             <li> java script </li>
+//             <li> python </li>
+//             <li> React </li>
+//           </ul>
+//       </div>
+
+//         <h1>Feedback</h1>
+//       <div className="square bottom">
+//         <div className="feedback-item">
+//           <div className="feedback-header">
+//             <img
+//               src="https://via.placeholder.com/50"
+//               alt="Daniel"
+//               className="feedback-avatar"
+//             />
+//             <h5>
+//               <a href="/profile/daniel" className="feedback-name">
+//                 Daniel
+//               </a>
+//             </h5>
+//           </div>
+//           <p className="feedback-comment">Amazing professional!</p>
+//         </div>
+
+//         <div className="feedback-item">
+//           <div className="feedback-header">
+//             <img
+//               src="https://via.placeholder.com/50"
+//               alt="Sarah"
+//               className="feedback-avatar"
+//             />
+//             <h5>
+//               <a href="/profile/daniel" className="feedback-name">
+//                 Sarah
+//               </a>
+//             </h5>
+//           </div>
+//           <p className="feedback-comment">Good!</p>
+//         </div>
+//       </div>
+
+//     </>
+//   )
+// }
+
+
+
+
+
+
+
+
+
+
+
+
 import './index.css';
 import { useState } from "react";
 
